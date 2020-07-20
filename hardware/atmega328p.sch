@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:MAB19-cache
-EELAYER 26 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -61,13 +60,13 @@ $EndComp
 $Comp
 L Device:C_Small C406
 U 1 1 59FE4EE2
-P 5850 4350
-F 0 "C406" V 5750 4250 50  0000 L CNN
-F 1 "100nF" V 5900 4400 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5850 4350 50  0001 C CNN
-F 3 "" H 5850 4350 50  0001 C CNN
-	1    5850 4350
-	0    -1   -1   0   
+P 6000 4450
+F 0 "C406" V 5900 4350 50  0000 L CNN
+F 1 "100nF" V 6050 4500 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 6000 4450 50  0001 C CNN
+F 3 "" H 6000 4450 50  0001 C CNN
+	1    6000 4450
+	-1   0    0    1   
 $EndComp
 $Comp
 L Device:LED_Small D402
@@ -92,7 +91,7 @@ Text HLabel 6450 2750 2    60   Output ~ 0
 MCP_SS
 Text HLabel 6450 2850 2    60   Input ~ 0
 MCP_INT
-Text Label 5150 4250 0    60   ~ 0
+Text Label 5350 4250 0    60   ~ 0
 RESET
 Text HLabel 7950 2200 0    60   Input ~ 0
 VCC
@@ -107,17 +106,6 @@ F 1 "1k" H 5930 5160 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5900 5200 50  0001 C CNN
 F 3 "" H 5900 5200 50  0001 C CNN
 	1    5900 5200
-	1    0    0    -1  
-$EndComp
-$Comp
-L MCU_Microchip_ATmega:ATmega328P-PU U401
-U 1 1 59FE3414
-P 4350 3950
-F 0 "U401" H 3850 5400 50  0000 L BNN
-F 1 "ATMEGA328P-PU" H 4500 2450 50  0000 L BNN
-F 2 "Package_DIP:DIP-28_W7.62mm_Socket" H 4350 3950 50  0001 C CIN
-F 3 "" H 4350 3950 50  0001 C CNN
-	1    4350 3950
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -142,10 +130,10 @@ F 3 "" H 7350 4450 50  0001 C CNN
 	1    7350 4450
 	0    -1   -1   0   
 $EndComp
+Text HLabel 5050 4150 2    60   Input ~ 0
+SCL
 NoConn ~ 5050 3850
 NoConn ~ 5050 3950
-NoConn ~ 5050 4050
-NoConn ~ 5050 4150
 NoConn ~ 5050 4750
 NoConn ~ 5050 4850
 Text Notes 5100 6400 0    60   ~ 0
@@ -204,6 +192,8 @@ Wire Wire Line
 	5050 4150 4950 4150
 Wire Wire Line
 	4950 4850 5050 4850
+Wire Wire Line
+	5050 4650 4950 4650
 Wire Wire Line
 	5050 4750 4950 4750
 Wire Wire Line
@@ -270,7 +260,7 @@ L Diode:LL4148 D401
 U 1 1 5BE95CC8
 P 5750 4050
 F 0 "D401" V 5650 4200 50  0000 R CNN
-F 1 "LL4148" V 5750 4400 50  0000 R CNN
+F 1 "LL4148" V 6025 4200 50  0000 R CNN
 F 2 "Diode_SMD:D_MiniMELF_Handsoldering" H 5750 3875 50  0001 C CNN
 F 3 "http://www.vishay.com/docs/85557/ll4148.pdf" H 5750 4050 50  0001 C CNN
 	1    5750 4050
@@ -364,16 +354,16 @@ Wire Wire Line
 $Comp
 L power:GND #PWR0408
 U 1 1 5BECF494
-P 5750 4400
-F 0 "#PWR0408" H 5750 4150 50  0001 C CNN
-F 1 "GND" H 5650 4400 50  0000 C CNN
-F 2 "" H 5750 4400 50  0001 C CNN
-F 3 "" H 5750 4400 50  0001 C CNN
-	1    5750 4400
+P 6000 4650
+F 0 "#PWR0408" H 6000 4400 50  0001 C CNN
+F 1 "GND" H 6050 4450 50  0000 C CNN
+F 2 "" H 6000 4650 50  0001 C CNN
+F 3 "" H 6000 4650 50  0001 C CNN
+	1    6000 4650
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5750 4350 5750 4400
+	6000 4550 6000 4650
 Wire Wire Line
 	5750 3750 5750 3850
 Connection ~ 5750 3850
@@ -525,13 +515,20 @@ F 3 "" H 4550 2250 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	4550 2250 4550 2150
-NoConn ~ 5050 3650
-Wire Wire Line
-	5950 4350 6000 4350
-Text Label 5050 4650 0    50   ~ 0
+$Comp
+L MCU_Microchip_ATmega:ATmega328P-PU U401
+U 1 1 59FE3414
+P 4350 3950
+F 0 "U401" H 3850 5400 50  0000 L BNN
+F 1 "ATMEGA328P-PU" H 4500 2450 50  0000 L BNN
+F 2 "Package_DIP:DIP-28_W7.62mm_Socket" H 4350 3950 50  0001 C CIN
+F 3 "" H 4350 3950 50  0001 C CNN
+	1    4350 3950
+	1    0    0    -1  
+$EndComp
+Text HLabel 5050 4050 2    60   Input ~ 0
+SDA
+Text HLabel 5050 3650 2    50   Output ~ 0
 ON_OFF_PUMP
-Text HLabel 5600 4650 2    50   Output ~ 0
-ON_OFF_PUMP
-Wire Wire Line
-	4950 4650 5600 4650
+NoConn ~ 5050 4650
 $EndSCHEMATC

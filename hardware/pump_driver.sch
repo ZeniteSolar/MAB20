@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:MAB19-cache
-EELAYER 26 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -119,17 +118,6 @@ Wire Wire Line
 Wire Wire Line
 	5500 4650 5500 4750
 $Comp
-L Device:Q_NPN_Darlington_BCE Q1
-U 1 1 5C905E64
-P 6550 4400
-F 0 "Q1" H 6741 4446 50  0000 L CNN
-F 1 "BCV27" H 6741 4355 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:TSOT-23_HandSoldering" H 6750 4500 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/BCV27_BCV47.pdf" H 6550 4400 50  0001 C CNN
-	1    6550 4400
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:C_Small C4
 U 1 1 5C905E6B
 P 6250 4550
@@ -175,17 +163,6 @@ F 2 "Diode_SMD:D_MiniMELF" H 6650 3325 50  0001 C CNN
 F 3 "http://www.vishay.com/docs/85557/ll4148.pdf" H 6650 3500 50  0001 C CNN
 	1    6650 3500
 	0    -1   1    0   
-$EndComp
-$Comp
-L Relay:G5LE-1 K1
-U 1 1 5C905E88
-P 7450 3500
-F 0 "K1" H 7450 2950 50  0000 R CNN
-F 1 "coil: 12VDC, contact: 125V/10A" H 8400 3050 50  0000 R CNN
-F 2 "Relay_THT:Relay_SPDT_SANYOU_SRD_Series_Form_C" H 7900 3450 50  0001 L CNN
-F 3 "http://www.sanyourelay.ca/public/products/pdf/SRD.pdf" H 7450 3100 50  0001 C CNN
-	1    7450 3500
-	1    0    0    1   
 $EndComp
 Wire Wire Line
 	7250 3800 7250 3850
@@ -239,17 +216,6 @@ F 3 "https://www.onsemi.com/pub/Collateral/MUR420-D.PDF" V 8150 4250 50  0001 C 
 $EndComp
 Wire Wire Line
 	8150 4350 8150 4750
-$Comp
-L Device:Fuse_Small F1
-U 1 1 5C905EB6
-P 6650 3000
-F 0 "F1" H 6650 3185 50  0000 C CNN
-F 1 "3A" H 6650 3094 50  0000 C CNN
-F 2 "KicadZeniteSolarLibrary18:Fuse_Holder_5x20" H 6650 3000 50  0001 C CNN
-F 3 "~" H 6650 3000 50  0001 C CNN
-	1    6650 3000
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	8150 4750 8550 4750
 Wire Wire Line
@@ -268,8 +234,6 @@ $EndComp
 Wire Wire Line
 	6650 4750 6650 4850
 Connection ~ 6650 4750
-Wire Wire Line
-	6650 3100 6650 3150
 $Comp
 L Connector:TestPoint_Probe TP4
 U 1 1 5C905ED1
@@ -469,8 +433,6 @@ Text HLabel 8675 3350 2    50   Output ~ 0
 -Pump
 Text HLabel 6650 2650 1    50   Input ~ 0
 Vin
-Wire Wire Line
-	6650 2650 6650 2900
 Text Notes 6675 2725 0    39   Italic 0
 +12V\n
 Text HLabel 7025 4900 0    50   BiDi ~ 0
@@ -482,31 +444,36 @@ Wire Wire Line
 Connection ~ 7025 4750
 Wire Wire Line
 	7025 4750 7750 4750
-$Comp
-L Jumper:SolderJumper_3_Bridged12 JP1
-U 1 1 5C90C600
-P 7650 3850
-F 0 "JP1" H 7650 4055 50  0000 C CNN
-F 1 "SolderJumper_3_Bridged12" H 7650 3964 50  0000 C CNN
-F 2 "Jumper:SolderJumper-3_P1.3mm_Bridged2Bar12_Pad1.0x1.5mm_NumberLabels" H 7650 3850 50  0001 C CNN
-F 3 "~" H 7650 3850 50  0001 C CNN
-	1    7650 3850
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	7750 3800 7850 3800
-Wire Wire Line
-	7850 3800 7850 3850
-Wire Wire Line
-	7550 3800 7450 3800
-Wire Wire Line
-	7450 3800 7450 3850
-Wire Wire Line
-	7650 4000 7750 4000
 Wire Wire Line
 	7750 4000 8150 4000
 Connection ~ 7750 4000
 Connection ~ 8150 4000
 Wire Wire Line
 	8150 4000 8150 3850
+Wire Wire Line
+	6650 2650 6650 3150
+$Comp
+L Device:Q_NPN_Darlington_BEC Q1
+U 1 1 5F156DB2
+P 6550 4400
+F 0 "Q1" H 6740 4446 50  0000 L CNN
+F 1 "BCV27" H 6740 4355 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23_Handsoldering" H 6750 4500 50  0001 C CNN
+F 3 "~" H 6550 4400 50  0001 C CNN
+	1    6550 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Relay:G5LE-1 K1
+U 1 1 5C905E88
+P 7450 3500
+F 0 "K1" H 7450 2950 50  0000 R CNN
+F 1 "coil: 12VDC, contact: 125V/10A" H 8400 3050 50  0000 R CNN
+F 2 "Relay_THT:Relay_SPDT_SANYOU_SRD_Series_Form_C" H 7900 3450 50  0001 L CNN
+F 3 "http://www.sanyourelay.ca/public/products/pdf/SRD.pdf" H 7450 3100 50  0001 C CNN
+	1    7450 3500
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	7750 3800 7750 4000
 $EndSCHEMATC

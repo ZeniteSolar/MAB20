@@ -1,11 +1,11 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
-# MCP2515-xSO-Interface_CAN_LIN
+# MCP2515-xSO-Interface_CAN_LIN-MAB19-rescue
 #
-DEF MCP2515-xSO-Interface_CAN_LIN U 0 20 Y Y 1 F N
+DEF MCP2515-xSO-Interface_CAN_LIN-MAB19-rescue U 0 20 Y Y 1 F N
 F0 "U" -400 775 50 H V R CNN
-F1 "MCP2515-xSO-Interface_CAN_LIN" 750 800 50 H V R TNN
+F1 "MCP2515-xSO-Interface_CAN_LIN-MAB19-rescue" 750 800 50 H V R TNN
 F2 "Package_SO:SOIC-18W_7.5x11.6mm_P1.27mm" 0 -900 50 H I C CIN
 F3 "" 100 -800 50 H I C CNN
 $FPLIST

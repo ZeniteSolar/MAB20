@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:MAB19-cache
-EELAYER 26 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -152,6 +151,15 @@ Wire Wire Line
 	6500 4800 6850 4800
 Wire Wire Line
 	4600 3950 4650 3950
+Text HLabel 6650 3550 2    60   Input ~ 0
++18V_OUT
+Wire Wire Line
+	5200 3550 5200 3950
+Wire Wire Line
+	5200 3550 6650 3550
+Connection ~ 5200 3550
+Wire Wire Line
+	5200 3450 5200 3550
 $Comp
 L power:PWR_FLAG #FLG0501
 U 1 1 5BE75359
@@ -174,6 +182,4 @@ F 3 "~" H 5200 4900 50  0001 C CNN
 	1    5200 4900
 	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	5200 3450 5200 3950
 $EndSCHEMATC
