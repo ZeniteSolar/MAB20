@@ -24,9 +24,9 @@ F 3 "https://www.sparkfun.com/datasheets/Components/LM7805.pdf" H 5900 3900 50  
 	1    5900 3950
 	1    0    0    -1  
 $EndComp
-Text HLabel 3950 4800 0    60   Output ~ 0
+Text HLabel 3950 4800 0    60   Input ~ 0
 GND
-Text HLabel 6650 3750 2    60   Input ~ 0
+Text HLabel 7200 3950 2    60   Output ~ 0
 +5V_OUT
 $Comp
 L Device:CP1_Small C501
@@ -107,8 +107,6 @@ Wire Wire Line
 	4300 3950 3950 3950
 Wire Wire Line
 	6200 3950 6500 3950
-Wire Wire Line
-	6500 3750 6500 3950
 Connection ~ 5200 4800
 Wire Wire Line
 	5900 4800 5900 4250
@@ -127,8 +125,6 @@ Wire Wire Line
 	4900 3950 4900 4300
 Wire Wire Line
 	4850 3950 4900 3950
-Wire Wire Line
-	6650 3750 6500 3750
 Wire Wire Line
 	4900 3950 5200 3950
 Wire Wire Line
@@ -151,24 +147,24 @@ Wire Wire Line
 	6500 4800 6850 4800
 Wire Wire Line
 	4600 3950 4650 3950
-Text HLabel 6650 3550 2    60   Input ~ 0
+Text HLabel 7200 3700 2    60   Output ~ 0
 +18V_OUT
 Wire Wire Line
-	5200 3550 5200 3950
+	5200 3700 5200 3950
 Wire Wire Line
-	5200 3550 6650 3550
-Connection ~ 5200 3550
+	5200 3700 7200 3700
+Connection ~ 5200 3700
 Wire Wire Line
-	5200 3450 5200 3550
+	5200 3600 5200 3700
 $Comp
 L power:PWR_FLAG #FLG0501
 U 1 1 5BE75359
-P 5200 3450
-F 0 "#FLG0501" H 5200 3525 50  0001 C CNN
-F 1 "PWR_FLAG" H 5200 3650 50  0000 C CNN
-F 2 "" H 5200 3450 50  0001 C CNN
-F 3 "~" H 5200 3450 50  0001 C CNN
-	1    5200 3450
+P 5200 3600
+F 0 "#FLG0501" H 5200 3675 50  0001 C CNN
+F 1 "PWR_FLAG" H 5200 3800 50  0000 C CNN
+F 2 "" H 5200 3600 50  0001 C CNN
+F 3 "~" H 5200 3600 50  0001 C CNN
+	1    5200 3600
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -182,4 +178,12 @@ F 3 "~" H 5200 4900 50  0001 C CNN
 	1    5200 4900
 	-1   0    0    1   
 $EndComp
+Text HLabel 7200 4800 2    60   Output ~ 0
+GND_OUT
+Wire Wire Line
+	6850 4800 7200 4800
+Connection ~ 6850 4800
+Wire Wire Line
+	7200 3950 6850 3950
+Connection ~ 6850 3950
 $EndSCHEMATC

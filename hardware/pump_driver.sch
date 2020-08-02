@@ -220,19 +220,6 @@ Wire Wire Line
 	8150 4750 8550 4750
 Wire Wire Line
 	8150 3850 8150 3250
-$Comp
-L power:GNDPWR #PWR0109
-U 1 1 5C905EC7
-P 6650 4850
-F 0 "#PWR0109" H 6650 4650 50  0001 C CNN
-F 1 "GNDPWR" H 6654 4696 50  0000 C CNN
-F 2 "" H 6650 4800 50  0001 C CNN
-F 3 "" H 6650 4800 50  0001 C CNN
-	1    6650 4850
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6650 4750 6650 4850
 Connection ~ 6650 4750
 $Comp
 L Connector:TestPoint_Probe TP4
@@ -419,7 +406,7 @@ Text HLabel 3300 4250 0    50   Input ~ 0
 On-Off
 Wire Wire Line
 	3300 4250 3400 4250
-Text HLabel 3400 4350 0    50   BiDi ~ 0
+Text HLabel 3300 4350 0    50   Input ~ 0
 On-Off_Ref
 Text HLabel 8675 3150 2    50   Output ~ 0
 Level_sensor
@@ -431,27 +418,18 @@ Wire Wire Line
 	8150 3250 8675 3250
 Text HLabel 8675 3350 2    50   Output ~ 0
 -Pump
-Text HLabel 6650 2650 1    50   Input ~ 0
+Text HLabel 2400 3150 0    50   Input ~ 0
 Vin
-Text Notes 6675 2725 0    39   Italic 0
+Text Notes 2450 3100 0    39   Italic 0
 +12V\n
-Text HLabel 7025 4900 0    50   BiDi ~ 0
+Text HLabel 2350 4750 0    50   Input ~ 0
 GND
-Wire Wire Line
-	7025 4900 7025 4750
-Wire Wire Line
-	6650 4750 7025 4750
-Connection ~ 7025 4750
-Wire Wire Line
-	7025 4750 7750 4750
 Wire Wire Line
 	7750 4000 8150 4000
 Connection ~ 7750 4000
 Connection ~ 8150 4000
 Wire Wire Line
 	8150 4000 8150 3850
-Wire Wire Line
-	6650 2650 6650 3150
 $Comp
 L Device:Q_NPN_Darlington_BEC Q1
 U 1 1 5F156DB2
@@ -476,4 +454,15 @@ F 3 "http://www.sanyourelay.ca/public/products/pdf/SRD.pdf" H 7450 3100 50  0001
 $EndComp
 Wire Wire Line
 	7750 3800 7750 4000
+Wire Wire Line
+	2350 4750 4800 4750
+Connection ~ 4800 4750
+Wire Wire Line
+	6650 4750 7750 4750
+Wire Wire Line
+	2400 3150 5500 3150
+Connection ~ 5500 3150
+Wire Wire Line
+	3300 4350 3400 4350
+NoConn ~ 7550 3800
 $EndSCHEMATC
