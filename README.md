@@ -20,25 +20,23 @@ isolados com opto-acopladores.
 
 #### Requisitos
 
-Requisitos
-
-1.Ligar as bombas de Porão
+   1.Ligar as bombas de Porão
     
-  - Ligar por controle manual
+        - Ligar por controle manual
     
-  - Ligar por controle automatico
+        - Ligar por controle automatico
 
-2.Manter as baterias isoladas galvanicamente
+   2.Manter as baterias isoladas galvanicamente
      
-   - Usar isolamento otico
+        - Usar isolamento otico
 
-3.Proteções
+   3.Proteções
    
-   - Limitar a corrente de transiente do relé para não queimar  o transistor de acionamento 
+        - Limitar a corrente de transiente do relé para não queimar  o transistor de acionamento 
    
-   - Fusiveis
+        - Fusiveis
    
-   - Filtrar ruidos que possam resultar em falsos acionamentos
+        - Filtrar ruidos que possam resultar em falsos acionamentos
 
            
 
