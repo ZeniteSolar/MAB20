@@ -1,5 +1,5 @@
-# MAB19
-  **M**odulo de **A**cionamento das **B**ombas de porão
+# MAB20
+**M**odulo de **A**cionamento das **B**ombas de porão
 
 Embarcação Guarapuvu II
 
@@ -18,6 +18,35 @@ isolados com opto-acopladores.
 ![](https://github.com/ZeniteSolar/MAB20/blob/master/hardware/IMG/3DUP.png?raw=true)
 ![](https://github.com/ZeniteSolar/MAB20/blob/master/hardware/IMG/3DDOWN.png?raw=true)
 
+#### Requisitos
+
+Requisitos
+
+1.Ligar as bombas de Porão
+    
+  - Ligar por controle manual
+    
+  - Ligar por controle automatico
+
+2.Manter as baterias isoladas galvanicamente
+     
+   - Usar isolamento otico
+
+3.Proteções
+   
+   - Limitar a corrente de transiente do relé para não queimar  o transistor de acionamento 
+   
+   - Fusiveis
+   
+   - Filtrar ruidos que possam resultar em falsos acionamentos
+
+           
+
+#### Abordagens
+
+ 1.Driver da bomba
+ 
+ ![](https://github.com/ZeniteSolar/MAB20/blob/master/hardware/IMG/Pump_Driver.png?raw=true)
 
 
 
@@ -27,6 +56,3 @@ isolados com opto-acopladores.
 
 
 
-O módulo exibido na Figura 18 divide-se em vários blocos: canbus, atmega, power supply, canbus-
-connector, filter, pump_driver. Os circuitos que recebem, processam e alimentam o CAN, usam um layout
-padrão utilizado no barco para otimizar o processo de montagem.
