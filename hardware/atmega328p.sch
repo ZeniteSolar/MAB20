@@ -130,8 +130,6 @@ F 3 "" H 7350 4450 50  0001 C CNN
 	1    7350 4450
 	0    -1   -1   0   
 $EndComp
-Text HLabel 5050 4150 2    60   Input ~ 0
-SCL
 NoConn ~ 5050 3850
 NoConn ~ 5050 3950
 NoConn ~ 5050 4750
@@ -185,11 +183,7 @@ Wire Wire Line
 Wire Wire Line
 	4950 3850 5050 3850
 Wire Wire Line
-	4950 4050 5050 4050
-Wire Wire Line
 	4950 3950 5050 3950
-Wire Wire Line
-	5050 4150 4950 4150
 Wire Wire Line
 	4950 4850 5050 4850
 Wire Wire Line
@@ -526,9 +520,15 @@ F 3 "" H 4350 3950 50  0001 C CNN
 	1    4350 3950
 	1    0    0    -1  
 $EndComp
-Text HLabel 5050 4050 2    60   Input ~ 0
-SDA
 Text HLabel 5050 3650 2    50   Output ~ 0
 ON_OFF_PUMP
 NoConn ~ 5050 4650
+Wire Wire Line
+	4950 4150 5050 4150
+Wire Wire Line
+	4950 4050 5050 4050
+Text HLabel 5050 4150 2    60   Input ~ 0
+SCL
+Text HLabel 5050 4050 2    60   Input ~ 0
+SDA
 $EndSCHEMATC
