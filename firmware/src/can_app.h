@@ -41,8 +41,8 @@ void check_can(void);
 #define CAN_APP_CHECKS_WITHOUT_MIC19_MSG  200
 
 // can_app_checks
-uint8_t can_app_checks_without_mic19_msg;
-uint8_t can_app_send_state_clk_div;
-uint8_t can_app_send_pump_clk_div;
+extern uint8_t can_app_checks_without_mic19_msg;
+extern uint8_t can_app_send_state_clk_div;
+extern uint8_t can_app_send_pump_clk_div;
 
 #endif /* ifndef CAN_APP_H */

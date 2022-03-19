@@ -1,5 +1,9 @@
 #include "can_app.h"
 
+uint8_t can_app_checks_without_mic19_msg;
+uint8_t can_app_send_state_clk_div;
+uint8_t can_app_send_pump_clk_div;
+
 /**
  * @brief Prints a can message via usart
  */
