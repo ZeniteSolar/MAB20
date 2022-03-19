@@ -61,6 +61,7 @@ typedef union error_flags{
 void print_configurations(void);
 void print_system_flags(void);
 void print_error_flags(void);
+void print_infos(void);
 
 // machine tasks
 void task_initializing(void);
